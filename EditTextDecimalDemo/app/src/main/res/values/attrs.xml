@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="precision" format="integer" />
+    <attr name="scale" format="integer" />
+    <declare-styleable name="EditTextDecimal">
+        <attr name="precision" />
+        <attr name="scale" />
+    </declare-styleable>
+    <declare-styleable name="EditTextDecimalComma">
+        <attr name="precision" />
+        <attr name="scale" />
+    </declare-styleable>
+    <declare-styleable name="EditTextIntegerComma">
+        <attr name="numberLength" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="EditTextCard">
+        <attr name="cardType" format="enum">
+            <enum name="idCard" value="1"/>
+            <enum name="other" value="1"/>
+            <!-- TODO add cardType here -->
+
+        </attr>
+    </declare-styleable>
+</resources>
