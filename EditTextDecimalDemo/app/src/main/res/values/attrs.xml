@@ -17,9 +17,10 @@
 
     <declare-styleable name="EditTextCard">
         <attr name="cardType" format="enum">
+            <enum name="other" value="0"/>
             <enum name="idCard" value="1"/>
-            <enum name="other" value="1"/>
-            <!-- TODO add cardType here -->
+
+            <!-- TODO add cardType (enum) here -->
 
         </attr>
     </declare-styleable>

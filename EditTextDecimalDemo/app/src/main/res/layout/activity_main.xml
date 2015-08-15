@@ -1,11 +1,42 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:dividerPadding="70dp"
+    tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <th.in.lordgift.edittextdecimaldemo.widget.EditTextDecimal
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="12345.67"
+        app:precision="10"
+        app:scale="2" />
 
-</RelativeLayout>
+    <th.in.lordgift.edittextdecimaldemo.widget.EditTextIntegerComma
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="1,234,567"
+        app:numberLength="10" />
+
+    <th.in.lordgift.edittextdecimaldemo.widget.EditTextDecimalComma
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="12,345.67"
+        app:precision="10"
+        app:scale="2" />
+
+
+    <th.in.lordgift.edittextdecimaldemo.widget.EditTextCard
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="3-5555-55555-55-5"
+        app:cardType="idCard" />
+
+</LinearLayout>

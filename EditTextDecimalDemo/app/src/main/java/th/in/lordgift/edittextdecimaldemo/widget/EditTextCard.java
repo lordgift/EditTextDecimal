@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import th.in.lordgift.edittextdecimaldemo.R;
 
@@ -25,7 +24,8 @@ public class EditTextCard extends EditText implements TextWatcher, InputFilter {
     private boolean isFired = false;
     private int cardType;
 
-    public static final int CARDTYPE_IDCARD = 0;
+    public static final int CARDTYPE_OTHER = 0;
+    public static final int CARDTYPE_IDCARD = 1;
 
 
     public EditTextCard(Context context) {
@@ -108,12 +108,15 @@ public class EditTextCard extends EditText implements TextWatcher, InputFilter {
                 case CARDTYPE_IDCARD:
                     String removedHyphen = getText().toString().replaceAll("-", "");
                     if (count == 1 && removedHyphen.length() == 13 && !Utils.checkPID(removedHyphen)) {
-                        Toast.makeText(getContext(), "Invalid Id-Card", Toast.LENGTH_LONG).show();
+                        this.setTextColor( getResources().getColor(android.R.color.holo_red_light) );
+//                        Toast.makeText(getContext(), "Invalid Id-Card", Toast.LENGTH_LONG).show();
+                    } else {
+                        this.setTextColor( getResources().getColor(android.R.color.black) );
                     }
                     setText(Utils.insertIdCardHyphen(removedHyphen));
                     break;
 
-                //TODO add cardType here
+                //TODO add cardType (enum) here
             }
         } else {
             isFired = false;
