@@ -2,7 +2,7 @@
 
 EditText Decimal is custom EditText for show decimal with comma(,) and validation of precision & scale
 
-![Screenshot](https://github.com/lordgift/EditTextDecimal/Screenshot.jpg)
+![Screenshot](https://github.com/lordgift/EditTextDecimal/blob/master/Screenshot.jpg)
 
 ##Component
 1. `th.in.lordgift.widget.EditTextDecimal` - Decimal with floating point validation.
@@ -30,9 +30,11 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         app:scale="2" />
 ```
 
-`precision` - limit all digit included scale `EditTextDecimalComma` & `EditTextDecimalComma`
-`scale` - limit digit after point(.) `EditTextDecimalComma` & `EditTextDecimalComma`
-`numberLength` - limit all digit without comma for `EditTextIntegerComma`
-`cardType` - can only use idCard that is thai id-card format & validation
+* `precision` - limit all digit included scale `EditTextDecimalComma` & `EditTextDecimalComma`
+* `scale` - limit digit after point(.) `EditTextDecimalComma` & `EditTextDecimalComma`
+* `numberLength` - limit all digit without comma for `EditTextIntegerComma`
+* `cardType` - can only use idCard that is thai id-card format & validation
 
 *DO NOT FORGET SET ATTRIBUTES FOR COMPONENT, please `CTRL+SPACE`
+
+3. getValue() to get real value without comma(,) and hyphen(-)
