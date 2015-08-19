@@ -15,12 +15,12 @@ EditText Decimal is custom EditText for show decimal with comma(,) and validatio
 Please see the demo module
 
 1. Add namespace to your top-level layout XML
-```xml
-xmlns:app="http://schemas.android.com/apk/res-auto"
-```
+ ```xml
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ ```
 
 2. Add components to layout somewhere
-```xml
+ ```xml
     <th.in.lordgift.widget.EditTextDecimalComma
         android:id="@+id/editText2"
         android:layout_width="match_parent"
@@ -28,13 +28,13 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         android:hint="12,345.67"
         app:precision="10"
         app:scale="2" />
-```
+ ```
 
-* `precision` - limit all digit included scale `EditTextDecimalComma` & `EditTextDecimalComma`
-* `scale` - limit digit after point(.) `EditTextDecimalComma` & `EditTextDecimalComma`
-* `numberLength` - limit all digit without comma for `EditTextIntegerComma`
-* `cardType` - can only use idCard that is thai id-card format & validation
+ * `precision` - limit all digit included scale `EditTextDecimalComma` & `EditTextDecimalComma`
+ * `scale` - limit digit after point(.) `EditTextDecimalComma` & `EditTextDecimalComma`
+ * `numberLength` - limit all digit without comma for `EditTextIntegerComma`
+ * `cardType` - can only use idCard that is thai id-card format & validation
 
-*DO NOT FORGET SET ATTRIBUTES FOR COMPONENT, please `CTRL+SPACE`
+ *DO NOT FORGET SET ATTRIBUTES FOR COMPONENT, please `CTRL+SPACE`
 
 3. getValue() to get real value without comma(,) and hyphen(-)
