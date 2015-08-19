@@ -1,4 +1,4 @@
-package th.in.lordgift.edittextdecimaldemo.widget;
+package th.in.lordgift.utils;
 
 import android.text.TextUtils;
 

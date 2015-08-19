@@ -1,4 +1,4 @@
-package th.in.lordgift.edittextdecimaldemo.widget;
+package th.in.lordgift.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,8 +10,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
-
-import th.in.lordgift.edittextdecimaldemo.R;
+import th.in.lordgift.utils.Utils;
 
 /**
  * custom EditText for add hyphen for display. <BR/>
@@ -88,7 +87,7 @@ public class EditTextCard extends EditText implements TextWatcher, InputFilter {
                             if (destVal.matches("\\d{13,}"))
                                 return "";
 
-                        //TODO add cardType here
+                            //TODO add cardType here
                     }
                 }
             }
@@ -108,10 +107,10 @@ public class EditTextCard extends EditText implements TextWatcher, InputFilter {
                 case CARDTYPE_IDCARD:
                     String removedHyphen = getText().toString().replaceAll("-", "");
                     if (count == 1 && removedHyphen.length() == 13 && !Utils.checkPID(removedHyphen)) {
-                        this.setTextColor( getResources().getColor(android.R.color.holo_red_light) );
+                        this.setTextColor(getResources().getColor(android.R.color.holo_red_light));
 //                        Toast.makeText(getContext(), "Invalid Id-Card", Toast.LENGTH_LONG).show();
                     } else {
-                        this.setTextColor( getResources().getColor(android.R.color.black) );
+                        this.setTextColor(getResources().getColor(android.R.color.black));
                     }
                     setText(Utils.insertIdCardHyphen(removedHyphen));
                     break;

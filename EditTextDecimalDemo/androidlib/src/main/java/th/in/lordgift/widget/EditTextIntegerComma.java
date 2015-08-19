@@ -1,4 +1,4 @@
-package th.in.lordgift.edittextdecimaldemo.widget;
+package th.in.lordgift.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,8 +10,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
-
-import th.in.lordgift.edittextdecimaldemo.R;
+import th.in.lordgift.utils.Utils;
 
 /**
  *

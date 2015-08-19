@@ -8,7 +8,7 @@
     android:dividerPadding="70dp"
     tools:context=".MainActivity">
 
-    <th.in.lordgift.edittextdecimaldemo.widget.EditTextDecimal
+    <th.in.lordgift.widget.EditTextDecimal
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,14 +16,14 @@
         app:precision="10"
         app:scale="2" />
 
-    <th.in.lordgift.edittextdecimaldemo.widget.EditTextIntegerComma
+    <th.in.lordgift.widget.EditTextIntegerComma
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="1,234,567"
         app:numberLength="10" />
 
-    <th.in.lordgift.edittextdecimaldemo.widget.EditTextDecimalComma
+    <th.in.lordgift.widget.EditTextDecimalComma
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         app:scale="2" />
 
 
-    <th.in.lordgift.edittextdecimaldemo.widget.EditTextCard
+    <th.in.lordgift.widget.EditTextCard
         android:id="@+id/editText4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
