@@ -11,13 +11,15 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.EditText;
-import th.in.lordgift.utils.Utils;
+
+import th.in.lordgift.edittextdecimal.R;
+import th.in.lordgift.widget.utils.Utils;
 
 /**
  *
- * custom EditText for using with scale of number and add comma for precision. <BR/>
+ * custom EditText for using with scale of number and add comma for precision.
  *
- * precision = all number included scale (12345.67 => p=7,s=2)
+ * precision = all number included scale (12345.67 : p=7,s=2)
  *
  * Ex. 1,234.56
  *

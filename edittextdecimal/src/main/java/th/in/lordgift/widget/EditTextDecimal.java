@@ -9,11 +9,12 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
+import th.in.lordgift.edittextdecimal.R;
+
 /**
+ * custom EditText for using with scale of number.
  *
- * custom EditText for using with scale of number. <BR/>
- *
- * precision = all number included scale (12345.67 => p=7,s=2)
+ * precision = all number included scale (12345.67 : p=7,s=2)
  *
  * Ex. 12345.67
  *
@@ -42,7 +43,7 @@ public class EditTextDecimal extends EditText implements InputFilter {
         precision = array.getInt(R.styleable.EditTextDecimal_precision, -1);
         scale = array.getInt(R.styleable.EditTextDecimal_scale, -1);
 
-        if(precision < 0 || scale < 0 || scale > precision) {
+        if (precision < 0 || scale < 0 || scale > precision) {
             throw new IllegalArgumentException("Required attribute might not set, or invalid value. Please check res-auto attributes");
         }
 
@@ -54,10 +55,11 @@ public class EditTextDecimal extends EditText implements InputFilter {
 
     /**
      * getText without symbol that added for format display
+     *
      * @return realvalue in string without format symbol
      */
     public String getValue() {
-        return  getText().toString();
+        return getText().toString();
     }
 
     @Override
@@ -71,23 +73,23 @@ public class EditTextDecimal extends EditText implements InputFilter {
                     if (source.equals(".") && dest.toString().contains("."))
                         return "";
 
-                    if(source.equals("."))
-                        if(dest.toString().contains(".") || dest.toString().substring(dstart).length() > scale)
+                    if (source.equals("."))
+                        if (dest.toString().contains(".") || dest.toString().substring(dstart).length() > scale)
                             return "";
 
                     //only precision without floating point
-                    if (!source.equals(".") && dest.toString().matches("\\d{"+(precision-scale)+",}"))
+                    if (!source.equals(".") && dest.toString().matches("\\d{" + (precision - scale) + ",}"))
                         return "";
 
-                    if(dest.toString().contains(".")) {
+                    if (dest.toString().contains(".")) {
                         //scale limit (avoid move cursor when scale full by check only case dot before cursor)
                         if (dest.toString().matches("\\d*\\.\\d{" + scale + ",}"))
                             if (dest.toString().indexOf(".") < dstart)
-                            return "";
+                                return "";
 
                         //precision limit (avoided move cursor when precision full by check only case dot after cursor)
-                        if (dest.toString().matches("\\d{"+(precision-scale)+",}\\.\\d*"))
-                            if(dest.toString().indexOf(".") >= dstart)
+                        if (dest.toString().matches("\\d{" + (precision - scale) + ",}\\.\\d*"))
+                            if (dest.toString().indexOf(".") >= dstart)
                                 return "";
                     }
                 }

@@ -10,12 +10,14 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
-import th.in.lordgift.utils.Utils;
+
+import th.in.lordgift.edittextdecimal.R;
+import th.in.lordgift.widget.utils.Utils;
 
 /**
- * custom EditText for add hyphen for display. <BR/>
+ * custom EditText for add hyphen for display.
  * Ex. 1-1212-12121-12-1
- * <p/>
+ *
  * Created by Gift on 21-Jul-15.
  */
 public class EditTextCard extends EditText implements TextWatcher, InputFilter {

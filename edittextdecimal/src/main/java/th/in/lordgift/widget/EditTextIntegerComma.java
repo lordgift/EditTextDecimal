@@ -10,11 +10,13 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
-import th.in.lordgift.utils.Utils;
+
+import th.in.lordgift.edittextdecimal.R;
+import th.in.lordgift.widget.utils.Utils;
 
 /**
  *
- * custom EditText for add comma for display. <BR/>
+ * custom EditText for add comma for display.
  * Ex. 1,234,567
  *
  * Created by Gift on 21-Jul-15.
