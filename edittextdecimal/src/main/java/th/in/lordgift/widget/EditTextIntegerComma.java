@@ -12,7 +12,6 @@ import android.util.AttributeSet;
 import android.widget.EditText;
 
 import th.in.lordgift.edittextdecimal.R;
-import th.in.lordgift.widget.utils.Utils;
 
 /**
  *
