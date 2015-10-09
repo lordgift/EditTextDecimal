@@ -24,12 +24,13 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-version = "1.0"
+version = "1.1"
 group = "th.in.lordgift"
 
 def siteUrl = 'https://github.com/lordgift/EditTextDecimal'
 def gitUrl = 'https://github.com/lordgift/EditTextDecimal.git'
 
+def libraryDescription = 'EditText Decimal is custom EditText for show decimal with comma(,) and validation of precision & scale.'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -42,7 +43,7 @@ bintray {
     pkg {
         repo = "maven"
         name = "EditTextDecimal"
-        desc = 'EditText Decimal is custom EditText for show decimal with comma(,) and validation of precision & scale.'
+        desc = libraryDescription
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         issueTrackerUrl = 'https://github.com/lordgift/EditTextDecimal/issues'
@@ -50,16 +51,29 @@ bintray {
         licenses = ["Apache-2.0"]
         labels = ['android', 'edittext', 'decimal', 'comma', 'floating', 'format','validate', 'layout']
         publish = true
+        version {
+            desc = libraryDescription
+            gpg {
+                sign = true //Determines whether to GPG sign the files. The default is false
+                passphrase = properties.getProperty("bintray.gpg.password")
+                //Optional. The passphrase for GPG signing'
+            }
+        }
     }
 }
 
 install {
     repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
         pom {
             project {
                 packaging 'aar'
                 name 'EditTextDecimal'
                 url siteUrl
+
+                groupId group
+                artifactId 'edittextdecimal'
+
                 licenses {
                     license {
                         name 'The Apache Software License, Version 2.0'
