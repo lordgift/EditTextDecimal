@@ -1,5 +1,8 @@
 # EditTextDecimal
 
+![](https://img.shields.io/badge/Java-7-orange.svg)
+![](https://img.shields.io/badge/Android-aar-green.svg)
+
 EditText Decimal is custom EditText for show decimal with comma(,) and validation of precision & scale
 
 ![Screenshot](https://github.com/lordgift/EditTextDecimal/blob/master/Screenshot.jpg)
