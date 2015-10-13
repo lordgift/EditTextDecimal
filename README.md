@@ -1,4 +1,5 @@
 # EditTextDecimal
+## version 1.2
 
 ![](https://img.shields.io/badge/Java-7-orange.svg)
 ![](https://img.shields.io/badge/Android-aar-green.svg)
@@ -12,6 +13,14 @@ EditText Decimal is custom EditText for show decimal with comma(,) and validatio
 2. `th.in.lordgift.widget.EditTextIntegerComma` - Integer format with comma(,) and validate numberLength because ~~maxLenght~~ count comma(,).
 3. `th.in.lordgift.widget.EditTextDecimalComma` - mix of above.
 4. `th.in.lordgift.widget.EditTextCard` - validate idCard format with hyphen(-)
+
+##Installation
+
+Add dependency to your `build.gradle`
+
+```
+    compile 'th.in.lordgift:edittextdecimal:1.2'
+```
 
 ##Usage
 
