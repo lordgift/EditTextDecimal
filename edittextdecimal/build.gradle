@@ -71,8 +71,8 @@ install {
                 name 'EditTextDecimal'
                 url siteUrl
 
-                groupId group
-                artifactId 'edittextdecimal'
+//                groupId 'th.in.lordgift'
+//                artifactId 'edittextdecimal'
                 description libraryDescription
 
                 licenses {
