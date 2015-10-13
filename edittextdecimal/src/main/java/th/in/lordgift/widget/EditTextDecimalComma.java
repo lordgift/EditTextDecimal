@@ -74,7 +74,8 @@ public class EditTextDecimalComma extends EditText implements InputFilter, TextW
         Log.d("", "filter");
         if(!isFired) {
             for (int i = start; i < end; i++) {
-                if (!String.valueOf(source.charAt(i)).matches("(\\d|\\.|,)*")) {
+                //not match pattern or start with dot(.)
+                if (!String.valueOf(source.charAt(i)).matches("(\\d|\\.|,)*") || (dest.toString().length() == 0 && source.toString().equals("."))) {
                     return "";
                 } else {
                     if (!TextUtils.isEmpty(dest)) {
@@ -86,15 +87,15 @@ public class EditTextDecimalComma extends EditText implements InputFilter, TextW
                             destVal = destVal.replaceAll(",","");
                         }
 
-                        if (source.equals(".") && destVal.contains("."))
+                        if (".".equals(source.toString()) && destVal.contains("."))
                             return "";
 
-                        if (source.equals("."))
+                        if (".".equals(source.toString()))
                             if (destVal.contains(".") || dstart < 0 || destVal.substring(dstart).length() > scale)
                                 return "";
 
                         //only precision without floating point
-                        if (!source.equals(".") && destVal.matches("\\d{" + (precision-scale) + ",}"))
+                        if (!".".equals(source.toString()) && destVal.matches("\\d{" + (precision-scale) + ",}"))
                             return "";
 
                         if (destVal.contains(".")) {

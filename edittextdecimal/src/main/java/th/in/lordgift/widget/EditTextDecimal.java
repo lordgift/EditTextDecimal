@@ -65,20 +65,21 @@ public class EditTextDecimal extends EditText implements InputFilter {
     @Override
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
         for (int i = start; i < end; i++) {
-            if (!String.valueOf(source.charAt(i)).matches("\\d|\\.")) {
+            //not match pattern or start with dot(.)
+            if (!String.valueOf(source.charAt(i)).matches("\\d|\\.") || (dest.toString().length() == 0 && source.toString().equals("."))) {
                 return "";
             } else {
                 if (!TextUtils.isEmpty(dest)) {
 
-                    if (source.equals(".") && dest.toString().contains("."))
+                    if (".".equals(source.toString()) && dest.toString().contains("."))
                         return "";
 
-                    if (source.equals("."))
+                    if (".".equals(source.toString()))
                         if (dest.toString().contains(".") || dest.toString().substring(dstart).length() > scale)
                             return "";
 
                     //only precision without floating point
-                    if (!source.equals(".") && dest.toString().matches("\\d{" + (precision - scale) + ",}"))
+                    if (!".".equals(source.toString()) && dest.toString().matches("\\d{" + (precision - scale) + ",}"))
                         return "";
 
                     if (dest.toString().contains(".")) {
