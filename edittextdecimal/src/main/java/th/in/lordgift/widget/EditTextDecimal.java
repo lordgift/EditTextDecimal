@@ -66,7 +66,7 @@ public class EditTextDecimal extends EditText implements InputFilter {
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
         for (int i = start; i < end; i++) {
             //not match pattern or start with dot(.)
-            if (!String.valueOf(source.charAt(i)).matches("\\d|\\.") || (dest.toString().length() == 0 && source.toString().equals("."))) {
+            if (!String.valueOf(source.charAt(i)).matches("\\d|\\.") || (dest.toString().length() == 0 && ".".equals(source.toString()))) {
                 return "";
             } else {
                 if (!TextUtils.isEmpty(dest)) {
