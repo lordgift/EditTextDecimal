@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "th.in.lordgift.edittextdecimaldemo"
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -21,8 +21,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-//    compile project(':edittextdecimal')
+    compile project(':edittextdecimal')
     compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'th.in.lordgift:edittextdecimal:1.2'
+//    compile 'th.in.lordgift:edittextdecimal:1.2'
 }
 

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -24,7 +24,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-version = "1.2"
+version = "1.3"
 group = "th.in.lordgift"
 
 def siteUrl = 'https://github.com/lordgift/EditTextDecimal'
